@@ -10,12 +10,14 @@
 </head>
 
 <body style="margin:0; overflow:hidden;">
-
 <a-scene
 embedded
-arjs="trackingMethod: best; debugUIEnabled: false;">
+vr-mode-ui="enabled: false"
+renderer="logarithmicDepthBuffer: true;"
+arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;">
 
-<a-marker preset="hiro">
+
+<a-nft type="nft" url="christmas-card">
 
   <!-- CHRISTMAS TREE -->
 
@@ -95,7 +97,7 @@ arjs="trackingMethod: best; debugUIEnabled: false;">
     color="#2E7D32">
   </a-box>
 
-</a-marker>
+</a-nft>
 
 <a-entity camera></a-entity>
 

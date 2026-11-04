@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+</head>
+
+<body style="margin:0; overflow:hidden;">
+
+<a-scene
+embedded
+arjs="trackingMethod: best; debugUIEnabled: false;">
+
+<a-marker preset="hiro">
+
+  <!-- CHRISTMAS TREE -->
+
+  <a-entity
+    gltf-model="tree.glb"
+    position="0 0 0"
+    scale="0.3 0.3 0.3"
+
+    animation="
+      property: rotation;
+      to: 0 360 0;
+      loop: true;
+      dur: 30000">
+  </a-entity>
+
+  <!-- FLOATING MESSAGE -->
+
+  <a-text
+    value="Merry Christmas!\nLove,\nGill Suarez Family"
+    color="#FFD700"
+    align="center"
+    position="0 0.65 0"
+    scale="0.3 0.3 0.3"
+
+    animation="
+      property: position;
+      from: 0 0.65 0;
+      to: 0 0.75 0;
+      dir: alternate;
+      loop: true;
+      dur: 3000">
+  </a-text>
+
+  <!-- STAR -->
+
+  <a-sphere
+    position="0 0.35 0"
+    radius="0.02"
+    color="#FFD700"
+
+    animation="
+      property: scale;
+      from: 1 1 1;
+      to: 1.4 1.4 1.4;
+      dir: alternate;
+      loop: true;
+      dur: 1000">
+  </a-sphere>
+
+  <!-- RED PRESENT -->
+
+  <a-box
+    position="-0.08 0.03 0"
+    width="0.04"
+    height="0.04"
+    depth="0.04"
+    color="#D32F2F">
+  </a-box>
+
+  <!-- BLUE PRESENT -->
+
+  <a-box
+    position="0.08 0.03 0"
+    width="0.04"
+    height="0.04"
+    depth="0.04"
+    color="#1976D2">
+  </a-box>
+
+  <!-- GREEN PRESENT -->
+
+  <a-box
+    position="0 0.03 0.08"
+    width="0.04"
+    height="0.04"
+    depth="0.04"
+    color="#2E7D32">
+  </a-box>
+
+</a-marker>
+
+<a-entity camera></a-entity>
+
+</a-scene>
+
+</body>
+</html>

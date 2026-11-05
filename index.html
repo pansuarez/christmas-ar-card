@@ -16,15 +16,21 @@ vr-mode-ui="enabled: false"
 renderer="logarithmicDepthBuffer: true;"
 arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;">
 
-
-<a-nft type="nft" url="christmas-card">
+  <a-nft
+  type="nft"
+  url="christmas-card"
+  smooth="true"
+  smoothCount="10"
+  smoothTolerance="0.01"
+  smoothThreshold="5">
+  >
 
   <!-- CHRISTMAS TREE -->
 
   <a-entity
     gltf-model="tree.glb"
-    position="0 0 0"
-    scale="0.3 0.3 0.3"
+    position="50 0 -100"
+    scale="20 20 20"
 
     animation="
       property: rotation;
